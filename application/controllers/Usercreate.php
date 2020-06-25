@@ -18,6 +18,7 @@ class Usercreate extends CI_Controller {
             
             if ($this->form_validation->run())
             {
+             // just testing git 
                     $Data = [
                         'email'         => $this->input->post('email'),
                         'first_name'    => $this->input->post('first_name'),
