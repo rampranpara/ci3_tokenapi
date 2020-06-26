@@ -230,13 +230,13 @@
 						},
 						{
 							"key": "id",
-							"value": "5",
+							"value": "4",
 							"type": "text"
 						}
 					]
 				},
 				"url": {
-					"raw": "http://localhost/ci3/usercreate/userdelete",
+					"raw": "http://localhost/ci3/usercreate/getuserdetails",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -244,7 +244,94 @@
 					"path": [
 						"ci3",
 						"usercreate",
-						"userdelete"
+						"getuserdetails"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getuserdetails",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "1234",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "admin",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "CODEX@123",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "kunal1@gamil.com",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "first_name",
+							"value": "kunal1",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "last_name",
+							"value": "gharate",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "password",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "passconf",
+							"value": "123456",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "mobile",
+							"value": "1234567890",
+							"type": "text",
+							"disabled": true
+						},
+						{
+							"key": "id",
+							"value": "4",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost/ci3/usercreate/getuserdetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"path": [
+						"ci3",
+						"usercreate",
+						"getuserdetails"
 					]
 				}
 			},
