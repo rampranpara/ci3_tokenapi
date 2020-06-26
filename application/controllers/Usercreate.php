@@ -48,6 +48,29 @@ class Usercreate extends CI_Controller {
 
     }
 
+    public function getuserdetails()
+	{   
+        $id = $this->input->post('id');
+       
+        $query = $this->db->where('id', $id)->get('users');
+      
+        if($query->num_rows() > 0){
+            
+            $userData = $query->result();
+            
+            $Data=array('status_code'=>200,
+            'data'=> $userData 
+            );
+            header('Content-Type: application/json');
+            echo json_encode($Data);
+        } else {
+            $Data=array('status_code'=>404,
+            'message'=>'user is not exist');
+            header('Content-Type: application/json');
+            echo json_encode($Data);
+        }
+        
+    }
     
     public function userupdate()
 	{   
